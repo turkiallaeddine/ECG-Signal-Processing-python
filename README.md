@@ -27,10 +27,11 @@ The project is ideal for students and researchers in **Biomedical Engineering** 
 - Python 3.x
 - Libraries:
 
+ wfdb
+ numpy 
+pandas 
+matplotlib
 
-```bash
-pip install wfdb numpy pandas matplotlib
-```
 
 ---
 
