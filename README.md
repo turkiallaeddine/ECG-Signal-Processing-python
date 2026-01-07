@@ -33,6 +33,43 @@ pandas
 matplotlib
 
 
+
+
+
+## Why WFDB and CSV Are Used in This Project
+
+This project works with **real clinical ECG signals** obtained from PhysioNet, which is a well-known open-source repository for biomedical signals.
+
+PhysioNet stores physiological data using specialized medical formats such as `.dat` and `.hea`. These formats are optimized for clinical storage and annotation, but they are not convenient for direct data analysis or visualization.
+
+To handle these medical formats, we use the **WFDB (WaveForm DataBase) Python library**.  
+WFDB is a specialized library designed to:
+- Read real physiological signals (ECG, EEG, EMG, etc.)
+- Load multi-channel biomedical recordings
+- Preserve the original clinical signal quality
+
+Using WFDB allows us to access **raw, real-world ECG data** exactly as recorded in clinical studies.
+
+However, after loading the ECG signal, working directly with WFDB files is not practical for repeated analysis, signal processing, or machine learning. For this reason, the signal is converted and saved in **CSV (Comma-Separated Values) format**.
+
+CSV is a simple, text-based format used to store tabular data where:
+- Each row represents a time sample
+- Each column represents a variable (e.g., ECG amplitude)
+
+Saving ECG data as CSV provides several advantages:
+- It is human-readable and easy to inspect
+- It is compatible with Python, MATLAB, Excel, and scientific software
+- It simplifies signal processing, filtering, and feature extraction
+- It enables reproducible research and easy data sharing
+
+In biomedical engineering workflows, it is common practice to:
+1. Load raw clinical data using specialized tools (WFDB)
+2. Convert the signal into a universal analysis format (CSV)
+3. Perform signal processing, visualization, and machine learning
+
+This approach ensures accuracy, flexibility, and reproducibility in biomedical signal analysis.
+
+
 ---
 
 🚀 Project Steps
