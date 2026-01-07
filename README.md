@@ -26,7 +26,7 @@ The project is ideal for students and researchers in **Biomedical Engineering** 
 ## 🛠️ Requirements
 - Python 3.x
 - Libraries:
-ط
+
 
 ```bash
 pip install wfdb numpy pandas matplotlib
